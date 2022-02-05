@@ -1,0 +1,32 @@
+<div class="container">
+
+    <div class="content">
+        <h1>Register</h1>
+        <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+            <div class="field">
+                <input type="text" placeholder="Email" formControlName="email" required>
+            </div>
+            <div class="field">
+                <input type="text" placeholder="Username" formControlName="username" required>
+            </div>
+            <div class="field">
+                <input type="password" placeholder="Password" formControlName="password" required>
+            </div>
+            <div class="field">
+                <input type="password" placeholder="Repeat password" formControlName="rePass" required>
+            </div>
+            <div class="field">
+                <select name="role" formControlName="role" id="role">
+                    <option value="" disabled>Select type of user</option>
+                    <option>User</option>
+                    <option>Organization</option>
+                </select>
+            </div>
+            <div class="submit-btn">
+                <input type="submit" value="Sign up">
+            </div>
+        </form>
+        <div class="signup">Already have account? <a routerLink="/auth/login">Sign in now</a> </div>
+    </div>
+
+</div>

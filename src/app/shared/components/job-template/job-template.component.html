@@ -1,0 +1,21 @@
+<li class="otherBooks">
+    <img [src]="job.img">
+    <h3>{{job.title}}</h3>
+    <br>
+    <p>Type: {{job.type}}</p>
+    <br>
+    <p>Category: {{job.category}}</p>
+    <br>
+    <p>Likes: {{job.likes.length}}</p>
+    <br>
+    <p>Description: {{job.description}}</p>
+    <br>
+    <div *ngIf="!hasPermission || job.ownerId != ownerID" class="buttons">
+        <a style="cursor:pointer" (click)="onLike()" class="button">Like</a>
+        <a style="cursor:pointer" *ngIf="!hasPermission" (click)="onApply()" class="button">Apply</a>
+    </div>
+    <div *ngIf="hasPermission && job.ownerId == ownerID" class="buttons">
+        <a style="cursor:pointer" [routerLink]="['/main/edit', job.id]" class="button">EDIT</a>
+        <a style="cursor:pointer" (click)="onDelete()" class="button">DELETE</a>
+    </div>
+</li>

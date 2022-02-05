@@ -1,0 +1,53 @@
+<div class="content">
+    <div class="create-label">
+        <p>{{ formGroup?.get('id')?.value ? 'Edit Job' : 'Post New Job' }}</p>
+    </div>
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+        <div class="title">
+            <label for="Title">Title</label>
+            <input type="text" id="title" placeholder="enter title" formControlName="title">
+            <small class="error"
+                *ngIf="formGroup.get('title')?.touched && formGroup.get('title')?.hasError('required')">
+                This field is required!
+            </small>
+        </div>
+        <div class="description">
+            <label for="description">Description</label>
+            <input type="text" id="description" placeholder="enter description" formControlName="description">
+            <small class="error"
+                *ngIf="formGroup.get('description')?.touched && formGroup.get('description')?.hasError('required')">
+                This field is required!
+            </small>
+        </div>
+        <div class="type">
+            <label for="type">Type</label>
+            <input type="text" id="type" placeholder="enter category" formControlName="type">
+            <small class="error"
+                *ngIf="formGroup.get('type')?.touched && formGroup.get('type')?.hasError('required')">
+                This field is required!
+            </small>
+        </div>
+        <div class="category">
+            <label for="category">Category</label>
+            <input type="text" id="category" placeholder="enter category" formControlName="category">
+            <small class="error"
+                *ngIf="formGroup.get('category')?.touched && formGroup.get('category')?.hasError('required')">
+                This field is required!
+            </small>
+        </div>
+        <div class="imgUrl">
+            <label for="imgUrl">Image URL</label>
+            <input type="text" id="imgUrl" placeholder="enter image url" formControlName="img">
+            <small class="error"
+                *ngIf="formGroup.get('img')?.touched && formGroup.get('img')?.hasError('required')">
+                This field is required!
+            </small>
+        </div>
+        <div class="create">
+            <button type="submit" [disabled]="formGroup.invalid">
+                {{ formGroup?.get('id')?.value ? 'Edit Job' : 'Post Job' }}
+            </button>
+        </div>
+    </form>
+
+</div>

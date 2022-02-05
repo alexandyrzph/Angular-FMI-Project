@@ -1,0 +1,12 @@
+<h1>Job Listings</h1>
+<section id="my-books-page" class="my-books">
+    <ul class="my-books-list">
+        <app-job-template *ngFor="let job of jobs" [job]="job" (deleteClicked)="onDelete($event)" (likeClicked)="onLike($event)" (applyClicked)="onApply($event)">
+        </app-job-template>
+        <li *ngIf="jobsCount == 0" class="noJobs">
+            <p>No Jobs Found in the database!</p>
+            <br>
+            <a *ngIf="hasPermission" class="first-post" routerLink="/main/edit">Post the first one</a>
+        </li>
+    </ul>
+</section>

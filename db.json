@@ -1,0 +1,56 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "title": "JavaScript Developer",
+      "description": "Work in the Biggest company in Europe with more than 1200 Developer",
+      "type": "Remote",
+      "category": "Development",
+      "img": "https://thumbs.dreamstime.com/z/frontend-development-web-banner-concept-website-interface-frontend-development-web-banner-concept-website-interface-design-159250288.jpg",
+      "likes": [],
+      "applied": [],
+      "hired": [],
+      "ownerId": 1
+    },
+    {
+      "id": 2,
+      "title": ".NET Developer",
+      "description": "Work in the Biggest company in Europe with more than 1200 Developer",
+      "type": "Full-Time",
+      "category": "Development",
+      "img": "https://store-images.s-microsoft.com/image/apps.19819.13638369915845626.487968ae-2300-4575-a380-70fdca921a90.d8747edd-551f-42a4-90d0-c4fa0e604a91?mode=scale&q=90&h=1080&w=1920",
+      "likes": [],
+      "applied": [],
+      "hired": [],
+      "ownerId": 1
+    },
+    {
+      "id": 3,
+      "title": "Linux Administrator",
+      "description": "Work in the Biggest company in Europe with more than 1200 Developer",
+      "type": "Part-Time",
+      "category": "Administration",
+      "img": "https://assets.jobs.bg/assets/logo/2021-03-15/s_55b5101d087064ce7066f6c05818fbfb.png",
+      "likes": [],
+      "applied": [],
+      "hired": [],
+      "ownerId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "123",
+      "role": "organization"
+    },
+    {
+      "id": 2,
+      "username": "user",
+      "email": "user@yahoo.com",
+      "password": "123",
+      "role": "user"
+    }
+  ]
+}

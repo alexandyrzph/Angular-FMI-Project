@@ -1,0 +1,22 @@
+<h1>Posted Jobs</h1>
+<section id="my-books-page" class="my-books">
+    <ul class="my-books-list">
+        <li *ngFor="let job of jobs" (deleteClicked)="onDelete()" class="otherBooks">
+            <img [src]="job.img">
+            <h3>{{job.title}}</h3>
+            <br>
+            <p>Type: {{job.type}}</p>
+            <br>
+            <p>Category: {{job.category}}</p>
+            <br>
+            <p>Likes: {{job.likes.length}}</p>
+            <br>
+            <p>Description: {{job.description}}</p>
+            <br>
+            <div class="buttons">
+                <a style="cursor:pointer" [routerLink]="['/main/edit', job.id]" class="button">EDIT</a>
+                <a style="cursor:pointer" (click)="onDelete()" class="button">DELETE</a>
+            </div>
+        </li>
+    </ul>
+</section>

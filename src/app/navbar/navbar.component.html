@@ -1,0 +1,27 @@
+<header>
+    <nav>
+        <li>
+            <div class="static">
+                <a class="active" routerLink="/main/">Home</a>
+                <a *ngIf="defaultUser != null || currentUser != null" routerLink="/main/jobs">All Listings</a>
+            </div>
+            <!-- Guest users -->
+            <div *ngIf="defaultUser == null && currentUser == null" id="guest">
+                <a routerLink="/auth/login">Login</a>
+                <a routerLink="/auth/register">Register</a>
+            </div>
+            <!-- Logged users -->
+            <div *ngIf="defaultUser?.role == 'user' " class="profile">
+                <a routerLink="/main/profile">Welcome, {{defaultUser?.username}}</a>
+                <a class="logoutBtn" routerLink="javascript:void(0)" (click)="onLogout()">Logout</a>
+            </div>
+            <!-- logged organization -->
+            <div *ngIf="currentUser?.role == 'organization' " class="profile">
+                <a routerLink="/main/profile">Welcome, {{currentUser?.username}}</a>
+                <a routerLink="/main/applications">Jobs Posted</a>
+                <a routerLink="/main/edit">Create Listing</a>
+                <a class="logoutBtn" routerLink="javascript:void(0)" (click)="onLogout()">Logout</a>
+            </div>
+        </li>
+    </nav>
+</header>

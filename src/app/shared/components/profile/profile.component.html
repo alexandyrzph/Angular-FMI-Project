@@ -1,0 +1,49 @@
+<div class="a-box">
+    <div class="img-container">
+        <div class="img-inner">
+            <div class="inner-skew">
+                <img *ngIf="currentUser?.role == 'organization'"
+                    src="https://cdn.pixabay.com/photo/2016/04/15/18/05/computer-1331579_960_720.png">
+                <img *ngIf="currentUser?.role != 'organization'"
+                    src="https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/avat-01-512.png">
+            </div>
+        </div>
+    </div>
+    <div class="text-container">
+        <h3 class="username">Username: {{currentUser?.username}}</h3>
+        <div class="role">Account role: {{currentUser?.role}}</div>
+        <div>
+            <p class="email">You can find me on - {{currentUser?.email}}</p>
+        </div>
+
+        <div class="delete">
+            <button (click)="onDelete()">Delete</button>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="create-label"></div>
+        <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+            <label>Reset Password</label>
+            <div class="username">
+                <label for="Title">Username</label>
+                <input type="text" id="title" placeholder="enter username" formControlName="username" required>
+
+            </div>
+            <div class="email">
+                <label for="description">Email</label>
+                <input type="text" id="email" placeholder="enter email" formControlName="email" required>
+
+            </div>
+            <div class="password">
+                <label for="type">Password</label>
+                <input type="text" id="password" placeholder="enter password" formControlName="password" required>
+            </div>
+            <div class="create">
+                <button>CONFIRM</button>
+            </div>
+        </form>
+
+    </div>
+
+</div>

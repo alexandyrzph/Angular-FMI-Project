@@ -1,0 +1,32 @@
+nav {
+  background-color: #11151C;
+  overflow: hidden;
+}
+
+.profile,
+#guest {
+  float: right;
+}
+
+
+nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+nav a:hover {
+  background-color: #D66853;
+  color: #fff;
+  transition: 285ms;
+
+}
+
+nav a.active {
+  background-color: #D66853;
+  color: white;
+}

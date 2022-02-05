@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="content">
+        <h1>Login</h1>
+        <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+            <div class="field">
+                <i class="fas fa-user"></i>
+                <input type="text" id="username" formControlName="username" placeholder="Username" required>
+            </div>
+            <div class="field">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" formControlName="password" placeholder="Password" required>
+            </div>
+            <br>
+            <div class="submit-btn">
+                <input type="submit" value="Sign in">
+            </div>
+        </form>
+        <div class="signup">Not a member? <a routerLink="/auth/register">Signup now</a></div>
+    </div>
+
+</div>

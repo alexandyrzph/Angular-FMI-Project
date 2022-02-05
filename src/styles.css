@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: gainsboro;
+}
